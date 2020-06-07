@@ -33,6 +33,6 @@ deploy:
   skip_cleanup: true
   draft: true
   on:
-    repo: AntonGrigorev/hw06
+    repo: AntonGrigorev/homework06
     tags: true
     all_branches: true
