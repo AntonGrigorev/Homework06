@@ -26,7 +26,13 @@ deploy:
   provider: releases
   api_key:
     secure: HOtT5Wo2BK4kCGlPlXLgj8kIq7AgrXZjg0SE70KuXeTKdZFvfbyfSzUJTsoORGCYtXGVYYhLmZ+mJT9YE+qLJpH7fZ2xj8XANNFSL4WqQED0k6Bw1iYGc8mudhm+JTCWD4r8psdcQkyTT3VWxVVHnRV5Vw9oLcoTr7j9SpR03v99WLekybgI34EUqRDwFeSLqnVH4iSjmtegDrQTjGg+PrxjW/tLfkXYFwiRpaZB/RId6kpc9MV1iFimv1JsBc6EkLlafnLQz2y0kJUh5fCXqeaSXm+ygqpcRelSRVtjGq1WE3Rhxysw05EySf+1p7xMvvdzrsSjDWN6cNx+fO8F3kc7mHodF/SxipT/aNJqyjIoamst3SwDdcb2tQiu1NmQT1JLiXf5qB7eG9NVUV+SedMiVJBwMkB2/DprcIqAA6YzULHTSdIxedMPHqVRgorAX9vei35s4gHTpn4/AOR2dl7hphi4wffjC9z3IdyZrHlsDQLkXA4XBHJPoipnc+DtNhrNoAZTOnrnjChEU37YbdTRFfC6Y/8d34H/0UVBqGhnXCwKN2tzCq3QVw0gX+0fz0JNIbgcRbtra2FXdjMZtDe++5fdTBPlricwyA93NqcKHrOH+eWQ0Kx3mcM5U+fvhPnrZnVnZex/6GVAfQln2FTuyxyPE8Nu7pdUkPyjYY0=
-  file: '"./_build/*"'
+  file: 
+    - ./_build/solver-1.0.1.-Darwin.dmg
+    - ./_build/solver-1.0.1.-Linux.deb
+    - ./_build/solver-1.0.1.-Linux.rpm
+  skip_cleanup: true
+  draft: true
   on:
     repo: AntonGrigorev/homework06
-  skip_cleanup: 'true'
+    tags: true
+    all_branches: true
