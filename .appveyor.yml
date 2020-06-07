@@ -1,0 +1,27 @@
+version: 1.0.{build}
+image: Visual Studio 2019
+platform:
+  - x86
+  - x64
+configuration: Release
+
+build_script:
+  - cmd: cmake -H. -B_build
+  - cmd: cmake --build _build --config Release
+  - cmd: cd _build
+  - cmd: ls
+  - cmd: cpack -G NSIS 
+  - cmd: cd ..
+
+artifacts:
+  - path: ./_build/*.exe
+    name: solver
+deploy:
+  release: $(APPVEYOR_REPO_TAG_NAME)
+  description: 'Release description'
+  provider: GitHub
+  auth_token:
+    secure: zsiJGPNgQ2m1iHORIXptBUIAzG8D9t98hjfVS2uL1q++s87bB5hX+/so1rTiL48y
+  artifact: solver
+  on:
+    APPVEYOR_REPO_TAG: true
