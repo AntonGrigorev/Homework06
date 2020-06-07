@@ -1,4 +1,7 @@
 ## Homework VI
+[![Build status](https://ci.appveyor.com/api/projects/status/bahooesnvd6s7mjl?svg=true)](https://ci.appveyor.com/project/AntonGrigorev/homework06)
+[![Build Status](https://travis-ci.com/AntonGrigorev/homework06.svg?branch=master)](https://travis-ci.com/AntonGrigorev/homework06)
+
 
 <a href="https://yandex.ru/efir/?stream_id=vjKAlxJ0UQrs"><img src="https://raw.githubusercontent.com/tp-labs/lab03/master/preview.png" width="640"/></a>
 
